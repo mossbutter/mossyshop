@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Retro Web Hub</title>
+  <title>mossbutter.net</title>
   <style>
     body {
       background: linear-gradient(135deg, #fceefc, #eaf6ff, #fff9e6);
@@ -93,8 +93,8 @@
 </head>
 <body>
 
-  <h1>Welcome to My Retro Web Hub!</h1>
-  <p>Serving pixels since 2002 (not really).</p>
+  <h1>Welcome to My Web Page</h1>
+  <p>Enjoy your stay and please contact <a href="mailto:admin@mossbutter.net">admin</a>for inquries and bugs. (all kinds)</p>
 
   <div class="window">
     <div class="title-bar">
@@ -118,10 +118,11 @@
     <div class="content">
       <ul class="link-list">
         <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#freeDL">Free Downloads</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#guestbook">Guestbook</a></li>
-        <li><a href="#webrings">Webrings</a></li>
+        <li><a href="www.mossbutter.shop">Shop</a></li>
+        <li><a href="#freeDL">Free Downloads</a></li>
       </ul>
     </div>
   </div>
@@ -137,6 +138,37 @@
       <p><strong>March 2025:</strong> Site launched! Added links and funky window styles!</p>
     </div>
   </div>
+
+  <style>
+    .sparkle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: gold;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: sparkle-fade 0.6s linear forwards;
+      z-index: 9999;
+    }
+  
+    @keyframes sparkle-fade {
+      to {
+        transform: translateY(-10px) scale(0.5);
+        opacity: 0;
+      }
+    }
+  </style>
+  
+  <script>
+    document.addEventListener("mousemove", function(e) {
+      const sparkle = document.createElement("div");
+      sparkle.classList.add("sparkle");
+      sparkle.style.left = `${e.pageX}px`;
+      sparkle.style.top = `${e.pageY}px`;
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 600); // remove after animation
+    });
+  </script>
 
 </body>
 </html>
