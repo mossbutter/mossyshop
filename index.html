@@ -3,98 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>mossbutter.net</title>
-  <style>
-    body {
-      background: linear-gradient(135deg, #fceefc, #eaf6ff, #fff9e6);
-      background-size: 400% 400%;
-      animation: backgroundShift 20s ease infinite;
-      color: #000;
-      font-family: 'Courier New', Courier, monospace;
-      padding: 80git px;
-    }
-
-    @keyframes backgroundShift {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
-    .window {
-      border: 2px solid #000;
-      box-shadow: 5px 5px 0 #000;
-      margin: 20px auto;
-      max-width: 600px;
-      background: linear-gradient(145deg, #ffeaf4, #eafaff);
-      background-size: 200% 200%;
-      animation: shimmer 10s ease infinite;
-    }
-
-    @keyframes shimmer {
-      0% {background-position: 0% 0%;}
-      50% {background-position: 100% 100%;}
-      100% {background-position: 0% 0%;}
-    }
-
-    .title-bar {
-      background-color: #ffd6fa;
-      padding: 5px 10px;
-      font-weight: bold;
-      color: #000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #000;
-    }
-
-    .title-bar-buttons span {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      margin-left: 4px;
-      border: 1px solid #000;
-      background-color: #fff;
-    }
-
-    .title-bar-buttons span:nth-child(1) { background-color: #ffc0cb; }
-    .title-bar-buttons span:nth-child(2) { background-color: #b0e0e6; }
-    .title-bar-buttons span:nth-child(3) { background-color: #fffacd; }
-
-    .content {
-      padding: 15px;
-    }
-
-    a {
-      color: #000;
-      background: linear-gradient(120deg, #a0c4ff, #bdb2ff);
-      padding: 2px 6px;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    a:hover {
-      background: linear-gradient(120deg, #ffc6ff, #caffbf);
-      text-decoration: underline;
-    }
-
-    .link-list {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      background: linear-gradient(to right, #ffb3c6, #c3bef0);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <h1>Welcome to My Web Page</h1>
-  <p>Enjoy your stay and please contact <a href="mailto:admin@mossbutter.net">admin</a>for inquries and bugs. (all kinds)</p>
+  <header class="page-header">
+    <h1>Welcome to My Web Page</h1>
+    <p>
+      Enjoy your stay and please contact
+      <a href="mailto:admin@mossbutter.net">admin</a> for inquiries and bugs. (all kinds)
+    </p>
+  </header>
 
   <div class="window">
     <div class="title-bar">
@@ -104,7 +23,7 @@
       </div>
     </div>
     <div class="content">
-      <p>Our mission it to behold and beheld. Explore the links below!</p>
+      <p>Our mission is to behold and beheld. Explore the links below!</p>
     </div>
   </div>
 
@@ -117,9 +36,9 @@
     </div>
     <div class="content">
       <ul class="link-list">
+        <li><a href="https://www.mossbutter.shop">Shop</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#guestbook">Guestbook</a></li>
-        <li><a href="www.mossbutter.shop">Shop</a></li>
         <li><a href="#freeDL">Free Downloads</a></li>
       </ul>
     </div>
@@ -137,36 +56,6 @@
     </div>
   </div>
 
-  <style>
-    .sparkle {
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      background: gold;
-      border-radius: 50%;
-      pointer-events: none;
-      animation: sparkle-fade 0.6s linear forwards;
-      z-index: 9999;
-    }
-  
-    @keyframes sparkle-fade {
-      to {
-        transform: translateY(-10px) scale(0.5);
-        opacity: 0;
-      }
-    }
-  </style>
-  
-  <script>
-    document.addEventListener("mousemove", function(e) {
-      const sparkle = document.createElement("div");
-      sparkle.classList.add("sparkle");
-      sparkle.style.left = `${e.pageX}px`;
-      sparkle.style.top = `${e.pageY}px`;
-      document.body.appendChild(sparkle);
-      setTimeout(() => sparkle.remove(), 600); // remove after animation
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>

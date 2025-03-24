@@ -1,0 +1,108 @@
+body {
+    background: linear-gradient(135deg, #fceefc, #eaf6ff, #fff9e6);
+    background-size: 400% 400%;
+    animation: backgroundShift 20s ease infinite;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  @keyframes backgroundShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .page-header {
+    margin-bottom: 20px;
+  
+    h1 {
+      font-size: 2rem;
+      background: linear-gradient(to right, #ffb3c6, #c3bef0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    a {
+      color: #000;
+      background: linear-gradient(120deg, #a0c4ff, #bdb2ff);
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: 0.3s;
+  
+      &:hover {
+        background: linear-gradient(120deg, #ffc6ff, #caffbf);
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .window {
+    border: 2px solid #000;
+    box-shadow: 5px 5px 0 #000;
+    margin: 20px auto;
+    max-width: 600px;
+    background: linear-gradient(145deg, #ffeaf4, #eafaff);
+    background-size: 200% 200%;
+    animation: shimmer 10s ease infinite;
+    text-align: left;
+  
+    .title-bar {
+      background-color: #ffd6fa;
+      padding: 5px 10px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #000;
+  
+      .title-bar-buttons span {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-left: 4px;
+        border: 1px solid #000;
+        background-color: #fff;
+  
+        &:nth-child(1) { background-color: #ffc0cb; }
+        &:nth-child(2) { background-color: #b0e0e6; }
+        &:nth-child(3) { background-color: #fffacd; }
+      }
+    }
+  
+    .content {
+      padding: 15px;
+  
+      ul.link-list {
+        list-style-type: square;
+        padding-left: 20px;
+      }
+    }
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+  
+  // Sparkle animation
+  .sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: gold;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkle-fade 0.6s linear forwards;
+    z-index: 9999;
+  }
+  
+  @keyframes sparkle-fade {
+    to {
+      transform: translateY(-10px) scale(0.5);
+      opacity: 0;
+    }
+  }
