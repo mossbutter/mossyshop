@@ -63,7 +63,7 @@
 .product-card .product-image {
   display: block;
   width: 100%;         /* Scale to the container's width */
-  max-width: 150px;    /* Ensure it doesn't get too big */
+  max-width: 50px;    /* Ensure it doesn't get too big */
   height: auto;
   margin: 0 auto 10px;
 }
