@@ -36,7 +36,139 @@
     </div>
     <div class="content">
       <ul class="link-list">
-        <li><a href="https://www.mossbutter.shop">Shop</a></li>
+        <li><a href="https:///* Global Styles */
+          body {
+            background: linear-gradient(135deg, #fceefc, #eaf6ff, #fff9e6);
+            background-size: 400% 400%;
+            animation: backgroundShift 20s ease infinite;
+            color: #000;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 80px;
+            text-align: center;
+          }
+          
+          @keyframes backgroundShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
+          
+          /* Header */
+          .page-header {
+            margin-bottom: 20px;
+          }
+          
+          .page-header h1 {
+            font-size: 2rem;
+            background: linear-gradient(to right, #ffb3c6, #c3bef0);
+            -webkit-background-clip: text;
+            background-clip: text;  /* Standard property for compatibility */
+            -webkit-text-fill-color: transparent;
+          }
+          
+          .page-header p {
+            font-size: 1rem;
+          }
+          
+          .page-header a {
+            color: #000;
+            background: linear-gradient(120deg, #a0c4ff, #bdb2ff);
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: 0.3s;
+          }
+          
+          .page-header a:hover {
+            background: linear-gradient(120deg, #ffc6ff, #caffbf);
+            text-decoration: underline;
+          }
+          
+          /* Window Component */
+          .window {
+            border: 2px solid #000;
+            box-shadow: 5px 5px 0 #000;
+            margin: 20px auto;
+            max-width: 600px;
+            background: linear-gradient(145deg, #ffeaf4, #eafaff);
+            background-size: 200% 200%;
+            animation: shimmer 10s ease infinite;
+            text-align: left;
+          }
+          
+          @keyframes shimmer {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+          }
+          
+          /* Title Bar */
+          .title-bar {
+            background-color: #ffd6fa;
+            padding: 5px 10px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #000;
+          }
+          
+          .title-bar-buttons span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-left: 4px;
+            border: 1px solid #000;
+            background-color: #fff;
+          }
+          
+          .title-bar-buttons span:nth-child(1) { background-color: #ffc0cb; }
+          .title-bar-buttons span:nth-child(2) { background-color: #b0e0e6; }
+          .title-bar-buttons span:nth-child(3) { background-color: #fffacd; }
+          
+          /* Content */
+          .content {
+            padding: 15px;
+          }
+          
+          .link-list {
+            list-style-type: square;
+            padding-left: 20px;
+          }
+          
+          /* Anchor Links */
+          a {
+            color: #000;
+            background: linear-gradient(120deg, #a0c4ff, #bdb2ff);
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: 0.3s;
+          }
+          
+          a:hover {
+            background: linear-gradient(120deg, #ffc6ff, #caffbf);
+            text-decoration: underline;
+          }
+          
+          /* Sparkle Animation */
+          .sparkle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: gold;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkle-fade 0.6s linear forwards;
+            z-index: 9999;
+          }
+          
+          @keyframes sparkle-fade {
+            to {
+              transform: translateY(-10px) scale(0.5);
+              opacity: 0;
+            }
+          }mossbutter.shop">Shop</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#guestbook">Guestbook</a></li>
         <li><a href="#freeDL">Free Downloads</a></li>
