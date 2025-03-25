@@ -2,8 +2,8 @@
 .product-card-container {
   display: flex;
   justify-content: center;
-  gap: 20px;       /* Adds padding between the cards */
-  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+  gap: 20px;
+  flex-wrap: nowrap; /* Prevents wrapping to a new line */
 }
 
 /* Windows-style product card (existing styles) */
@@ -63,7 +63,7 @@
 .product-card .product-image {
   display: block;
   width: 100%;         /* Scale to the container's width */
-  max-width: 250px;    /* Ensure it doesn't get too big */
+  max-width: 150px;    /* Ensure it doesn't get too big */
   height: auto;
   margin: 0 auto 10px;
 }
