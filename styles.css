@@ -131,3 +131,34 @@ body {
       opacity: 0;
     }
   }
+
+  .product-card {
+    border: 2px solid #000;
+    box-shadow: 5px 5px 0 #000;
+    background: linear-gradient(145deg, #ffeaf4, #eafaff);
+    max-width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .product-card .product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .product-card .product-info {
+    margin-top: 10px;
+  }
+  
+  .product-card .product-name {
+    font-size: 1.5rem;
+    margin: 5px 0;
+  }
+  
+  .product-card .product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
