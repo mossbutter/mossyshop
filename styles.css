@@ -1,4 +1,12 @@
-/* Inherit existing .window styling */
+/* Flex container for the three product cards */
+.product-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;       /* Adds padding between the cards */
+  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+
+/* Windows-style product card (existing styles) */
 .window {
   border: 2px solid #000;
   box-shadow: 5px 5px 0 #000;
@@ -10,50 +18,18 @@
   text-align: left;
 }
 
-/* Keyframe for shimmer animation */
 @keyframes shimmer {
   0% { background-position: 0% 0%; }
   50% { background-position: 100% 100%; }
   100% { background-position: 0% 0%; }
 }
 
-/* Product Card Specific Overrides */
+/* Narrower product card */
 .product-card {
-  max-width: 300px; /* narrower card */
+  max-width: 300px; /* Keeps card from getting too wide */
 }
 
-.product-card .content {
-  text-align: center; /* center image and info */
-  padding: 15px;
-}
-
-.product-card .product-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.product-card .product-info {
-  margin-top: 10px;
-}
-
-.product-card .product-name {
-  font-size: 1.5rem;
-  margin: 5px 0;
-}
-
-.product-card .product-price {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.product-image {
-  max-width: 50%;
-  height: auto;
-}
-
-/* Reuse title-bar and button styling from your existing code */
+/* Title Bar Styling (inherited from your existing code) */
 .title-bar {
   background-color: #ffd6fa;
   padding: 5px 10px;
@@ -76,3 +52,33 @@
 .title-bar-buttons span:nth-child(1) { background-color: #ffc0cb; }
 .title-bar-buttons span:nth-child(2) { background-color: #b0e0e6; }
 .title-bar-buttons span:nth-child(3) { background-color: #fffacd; }
+
+/* Content styling for centering card content */
+.product-card .content {
+  text-align: center;
+  padding: 15px;
+}
+
+/* Constrain the product image size */
+.product-card .product-image {
+  display: block;
+  width: 100%;         /* Scale to the container's width */
+  max-width: 250px;    /* Ensure it doesn't get too big */
+  height: auto;
+  margin: 0 auto 10px;
+}
+
+/* Product info styling */
+.product-card .product-info {
+  margin-top: 10px;
+}
+
+.product-card .product-name {
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+.product-card .product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
