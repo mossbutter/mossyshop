@@ -48,6 +48,11 @@
   font-weight: bold;
 }
 
+.product-image {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Reuse title-bar and button styling from your existing code */
 .title-bar {
   background-color: #ffd6fa;
